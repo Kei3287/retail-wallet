@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "1070094433616",
+    "project_id": "rlusd-wallet",
+    "storage_bucket": "rlusd-wallet.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070094433616:android:41ef3eea2960cc000c0055",
+        "android_client_info": {
+          "package_name": "com.flutterflow.finwallet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw4XlxdBXy8wIb1V7V1UIcqobjZ_weYPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070094433616:android:cfb1b14931023c970c0055",
+        "android_client_info": {
+          "package_name": "com.flutterflow.rlusdwallet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw4XlxdBXy8wIb1V7V1UIcqobjZ_weYPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070094433616:android:441d154b2559c9fa0c0055",
+        "android_client_info": {
+          "package_name": "com.mycompany.retailwallet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw4XlxdBXy8wIb1V7V1UIcqobjZ_weYPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
