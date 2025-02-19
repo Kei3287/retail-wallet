@@ -80,13 +80,6 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            if (Theme.of(context).brightness == Brightness.dark)
-                              Image.asset(
-                                'assets/images/finWallet_logo_landscape.png',
-                                width: 170.0,
-                                height: 60.0,
-                                fit: BoxFit.fitWidth,
-                              ),
                             if (!(Theme.of(context).brightness ==
                                 Brightness.dark))
                               Image.asset(
