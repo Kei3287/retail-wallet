@@ -1,3 +1,5 @@
+import '/custom_code/actions/index.dart' as actions;
+import 'package:provider/provider.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -22,11 +24,25 @@ void main() async {
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
+  final environmentValues = FFDevEnvironmentValues();
+  await environmentValues.initialize();
+
   await initFirebase();
 
   await FlutterFlowTheme.initialize();
 
-  runApp(MyApp());
+  final appState = FFAppState(); // Initialize FFAppState
+  await appState.initializePersistedState();
+
+  // Start final custom actions code
+  await actions.initializeWeb3Client();
+  await actions.initializeWeb3Auth();
+  // End final custom actions code
+
+  runApp(ChangeNotifierProvider(
+    create: (context) => appState,
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatefulWidget {
@@ -53,6 +69,11 @@ class _MyAppState extends State<MyApp> {
         : _router.routerDelegate.currentConfiguration;
     return matchList.uri.toString();
   }
+
+  List<String> getRouteStack() =>
+      _router.routerDelegate.currentConfiguration.matches
+          .map((e) => getRoute(e))
+          .toList();
 
   late Stream<BaseAuthUser> userStream;
 
