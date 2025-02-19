@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,6 +14,9 @@ export 'home_page_alt_model.dart';
 
 class HomePageAltWidget extends StatefulWidget {
   const HomePageAltWidget({super.key});
+
+  static String routeName = 'homePage_alt';
+  static String routePath = '/homePageAlt';
 
   @override
   State<HomePageAltWidget> createState() => _HomePageAltWidgetState();
@@ -719,7 +723,7 @@ class _HomePageAltWidgetState extends State<HomePageAltWidget> {
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            context.pushNamed('paymentDetails');
+                            context.pushNamed(PaymentDetailsWidget.routeName);
                           },
                           child: Row(
                             mainAxisSize: MainAxisSize.max,

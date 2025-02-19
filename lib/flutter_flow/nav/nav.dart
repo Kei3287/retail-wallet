@@ -9,13 +9,14 @@ import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
-import '/index.dart';
 import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/lat_lng.dart';
 import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'serialization_util.dart';
+
+import '/index.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -92,52 +93,52 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               appStateNotifier.loggedIn ? NavBarPage() : LoginPageWidget(),
         ),
         FFRoute(
-          name: 'loginPage',
-          path: '/loginPage',
+          name: LoginPageWidget.routeName,
+          path: LoginPageWidget.routePath,
           builder: (context, params) => LoginPageWidget(),
         ),
         FFRoute(
-          name: 'registerAccount',
-          path: '/registerAccount',
+          name: RegisterAccountWidget.routeName,
+          path: RegisterAccountWidget.routePath,
           builder: (context, params) => RegisterAccountWidget(),
         ),
         FFRoute(
-          name: 'completeProfile',
-          path: '/completeProfile',
+          name: CompleteProfileWidget.routeName,
+          path: CompleteProfileWidget.routePath,
           builder: (context, params) => CompleteProfileWidget(),
         ),
         FFRoute(
-          name: 'forgotPassword',
-          path: '/forgotPassword',
+          name: ForgotPasswordWidget.routeName,
+          path: ForgotPasswordWidget.routePath,
           builder: (context, params) => ForgotPasswordWidget(),
         ),
         FFRoute(
-          name: 'onboarding',
-          path: '/onboarding',
+          name: OnboardingWidget.routeName,
+          path: OnboardingWidget.routePath,
           builder: (context, params) => OnboardingWidget(),
         ),
         FFRoute(
-          name: 'createBudgetBegin',
-          path: '/createBudgetBegin',
+          name: CreateBudgetBeginWidget.routeName,
+          path: CreateBudgetBeginWidget.routePath,
           builder: (context, params) => CreateBudgetBeginWidget(),
         ),
         FFRoute(
-          name: 'MY_Card',
-          path: '/mYCard',
+          name: MYCardWidget.routeName,
+          path: MYCardWidget.routePath,
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'MY_Card')
               : MYCardWidget(),
         ),
         FFRoute(
-          name: 'MY_Budgets',
-          path: '/mYBudgets',
+          name: MYBudgetsWidget.routeName,
+          path: MYBudgetsWidget.routePath,
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'MY_Budgets')
               : MYBudgetsWidget(),
         ),
         FFRoute(
-          name: 'paymentDetails',
-          path: '/paymentDetails',
+          name: PaymentDetailsWidget.routeName,
+          path: PaymentDetailsWidget.routePath,
           builder: (context, params) => PaymentDetailsWidget(
             transactionDetails: params.getParam(
               'transactionDetails',
@@ -154,8 +155,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'MY_profilePage',
-          path: '/mYProfilePage',
+          name: MYProfilePageWidget.routeName,
+          path: MYProfilePageWidget.routePath,
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'MY_profilePage')
               : MYProfilePageWidget(
@@ -168,8 +169,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ),
         ),
         FFRoute(
-          name: 'budgetDetails',
-          path: '/budgetDetails',
+          name: BudgetDetailsWidget.routeName,
+          path: BudgetDetailsWidget.routePath,
           builder: (context, params) => BudgetDetailsWidget(
             budgetDetails: params.getParam(
               'budgetDetails',
@@ -180,33 +181,33 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'transferComplete',
-          path: '/transferComplete',
+          name: TransferCompleteWidget.routeName,
+          path: TransferCompleteWidget.routePath,
           builder: (context, params) => TransferCompleteWidget(),
         ),
         FFRoute(
-          name: 'transferFunds',
-          path: '/transferFunds',
+          name: TransferFundsWidget.routeName,
+          path: TransferFundsWidget.routePath,
           builder: (context, params) => TransferFundsWidget(),
         ),
         FFRoute(
-          name: 'requestFunds',
-          path: '/requestFunds',
+          name: RequestFundsWidget.routeName,
+          path: RequestFundsWidget.routePath,
           builder: (context, params) => RequestFundsWidget(),
         ),
         FFRoute(
-          name: 'createBudget',
-          path: '/createBudget',
+          name: CreateBudgetWidget.routeName,
+          path: CreateBudgetWidget.routePath,
           builder: (context, params) => CreateBudgetWidget(),
         ),
         FFRoute(
-          name: 'transaction_ADD',
-          path: '/transactionADD',
+          name: TransactionADDWidget.routeName,
+          path: TransactionADDWidget.routePath,
           builder: (context, params) => TransactionADDWidget(),
         ),
         FFRoute(
-          name: 'transaction_EDIT',
-          path: '/transactionEDIT',
+          name: TransactionEDITWidget.routeName,
+          path: TransactionEDITWidget.routePath,
           builder: (context, params) => TransactionEDITWidget(
             transactionDetails: params.getParam(
               'transactionDetails',
@@ -217,8 +218,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'editProfile',
-          path: '/editProfile',
+          name: EditProfileWidget.routeName,
+          path: EditProfileWidget.routePath,
           builder: (context, params) => EditProfileWidget(
             userProfile: params.getParam(
               'userProfile',
@@ -229,43 +230,43 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'changePassword',
-          path: '/changePassword',
+          name: ChangePasswordWidget.routeName,
+          path: ChangePasswordWidget.routePath,
           builder: (context, params) => ChangePasswordWidget(),
         ),
         FFRoute(
-          name: 'notificationsSettings',
-          path: '/notificationsSettings',
+          name: NotificationsSettingsWidget.routeName,
+          path: NotificationsSettingsWidget.routePath,
           builder: (context, params) => NotificationsSettingsWidget(),
         ),
         FFRoute(
-          name: 'privacyPolicy',
-          path: '/privacyPolicy',
+          name: PrivacyPolicyWidget.routeName,
+          path: PrivacyPolicyWidget.routePath,
           builder: (context, params) => PrivacyPolicyWidget(),
         ),
         FFRoute(
-          name: 'tutorial_PROFILE',
-          path: '/tutorialPROFILE',
+          name: TutorialPROFILEWidget.routeName,
+          path: TutorialPROFILEWidget.routePath,
           builder: (context, params) => TutorialPROFILEWidget(),
         ),
         FFRoute(
-          name: 'homePage',
-          path: '/homePage',
+          name: HomePageWidget.routeName,
+          path: HomePageWidget.routePath,
           builder: (context, params) => HomePageWidget(),
         ),
         FFRoute(
-          name: 'homePage_alt',
-          path: '/homePageAlt',
+          name: HomePageAltWidget.routeName,
+          path: HomePageAltWidget.routePath,
           builder: (context, params) => HomePageAltWidget(),
         ),
         FFRoute(
-          name: 'homePage_alt_1',
-          path: '/homePageAlt1',
+          name: HomePageAlt1Widget.routeName,
+          path: HomePageAlt1Widget.routePath,
           builder: (context, params) => HomePageAlt1Widget(),
         ),
         FFRoute(
-          name: 'budget_DELETE',
-          path: '/budgetDELETE',
+          name: BudgetDELETEWidget.routeName,
+          path: BudgetDELETEWidget.routePath,
           builder: (context, params) => BudgetDELETEWidget(
             budgetList: params.getParam(
               'budgetList',
@@ -276,8 +277,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'profilepage',
-          path: '/profilepage',
+          name: ProfilepageWidget.routeName,
+          path: ProfilepageWidget.routePath,
           builder: (context, params) => ProfilepageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),

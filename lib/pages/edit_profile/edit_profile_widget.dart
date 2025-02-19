@@ -22,6 +22,9 @@ class EditProfileWidget extends StatefulWidget {
 
   final DocumentReference? userProfile;
 
+  static String routeName = 'editProfile';
+  static String routePath = '/editProfile';
+
   @override
   State<EditProfileWidget> createState() => _EditProfileWidgetState();
 }

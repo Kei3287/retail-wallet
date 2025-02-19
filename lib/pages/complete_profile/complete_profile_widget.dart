@@ -8,6 +8,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:math';
 import 'dart:ui';
+import '/index.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -20,6 +21,9 @@ export 'complete_profile_model.dart';
 
 class CompleteProfileWidget extends StatefulWidget {
   const CompleteProfileWidget({super.key});
+
+  static String routeName = 'completeProfile';
+  static String routePath = '/completeProfile';
 
   @override
   State<CompleteProfileWidget> createState() => _CompleteProfileWidgetState();
@@ -611,7 +615,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                             photoUrl: '',
                           ));
 
-                          context.pushNamed('onboarding');
+                          context.pushNamed(OnboardingWidget.routeName);
                         },
                         text: FFLocalizations.of(context).getText(
                           'hbhd3bdt' /* Complete Profile */,
@@ -666,7 +670,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
 
                       return FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('onboarding');
+                          context.pushNamed(OnboardingWidget.routeName);
                         },
                         text: FFLocalizations.of(context).getText(
                           'w75dikic' /* Skip for Now */,

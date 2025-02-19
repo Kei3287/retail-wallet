@@ -4,6 +4,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/custom_code/actions/index.dart' as actions;
+import '/index.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -14,6 +16,9 @@ export 'register_account_model.dart';
 
 class RegisterAccountWidget extends StatefulWidget {
   const RegisterAccountWidget({super.key});
+
+  static String routeName = 'registerAccount';
+  static String routePath = '/registerAccount';
 
   @override
   State<RegisterAccountWidget> createState() => _RegisterAccountWidgetState();
@@ -48,6 +53,8 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -395,6 +402,7 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                     0.0, 24.0, 0.0, 24.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
+                                    var _shouldSetState = false;
                                     GoRouter.of(context).prepareAuthEvent();
                                     if (_model.passwordCreateTextController
                                             .text !=
@@ -421,6 +429,49 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                       return;
                                     }
 
+                                    _model.isLoggedIn =
+                                        await actions.loginWithWeb3Auth(
+                                      context,
+                                      currentJwtToken!,
+                                    );
+                                    _shouldSetState = true;
+                                    if (!(FFAppState().walletAddress != null &&
+                                        FFAppState().walletAddress != '')) {
+                                      await showDialog(
+                                        context: context,
+                                        builder: (alertDialogContext) {
+                                          return AlertDialog(
+                                            title: Text(
+                                                'Failed to create an accout or login'),
+                                            content: Text(
+                                                'Internal Error has occured. Please try again.'),
+                                            actions: [
+                                              TextButton(
+                                                onPressed: () => Navigator.pop(
+                                                    alertDialogContext),
+                                                child: Text('Ok'),
+                                              ),
+                                            ],
+                                          );
+                                        },
+                                      );
+                                      if (_shouldSetState) safeSetState(() {});
+                                      return;
+                                    }
+
+                                    await currentUserReference!.update({
+                                      ...createUsersRecordData(
+                                        walletAddress:
+                                            FFAppState().walletAddress,
+                                      ),
+                                      ...mapToFirestore(
+                                        {
+                                          'created_time':
+                                              FieldValue.serverTimestamp(),
+                                        },
+                                      ),
+                                    });
+
                                     await BudgetListRecord.collection
                                         .doc()
                                         .set(createBudgetListRecordData(
@@ -428,7 +479,10 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                         ));
 
                                     context.goNamedAuth(
-                                        'completeProfile', context.mounted);
+                                        CompleteProfileWidget.routeName,
+                                        context.mounted);
+
+                                    if (_shouldSetState) safeSetState(() {});
                                   },
                                   text: FFLocalizations.of(context).getText(
                                     '5kmjfwsk' /* Create Account */,
@@ -476,7 +530,7 @@ class _RegisterAccountWidgetState extends State<RegisterAccountWidget> {
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
                                         context.pushNamed(
-                                          'loginPage',
+                                          LoginPageWidget.routeName,
                                           extra: <String, dynamic>{
                                             kTransitionInfoKey: TransitionInfo(
                                               hasTransition: true,

@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -16,6 +17,9 @@ export 'profilepage_model.dart';
 
 class ProfilepageWidget extends StatefulWidget {
   const ProfilepageWidget({super.key});
+
+  static String routeName = 'profilepage';
+  static String routePath = '/profilepage';
 
   @override
   State<ProfilepageWidget> createState() => _ProfilepageWidgetState();
@@ -268,7 +272,7 @@ class _ProfilepageWidgetState extends State<ProfilepageWidget>
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             context.pushNamed(
-                              'transferFunds',
+                              TransferFundsWidget.routeName,
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,
@@ -335,7 +339,7 @@ class _ProfilepageWidgetState extends State<ProfilepageWidget>
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            context.goNamed('MY_Card');
+                            context.goNamed(MYCardWidget.routeName);
                           },
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.24,

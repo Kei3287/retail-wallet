@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'dart:math';
 import 'dart:ui';
+import '/index.dart';
 import 'transfer_funds_widget.dart' show TransferFundsWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';

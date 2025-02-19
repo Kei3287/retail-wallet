@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -20,6 +21,9 @@ class BudgetDetailsWidget extends StatefulWidget {
   });
 
   final DocumentReference? budgetDetails;
+
+  static String routeName = 'budgetDetails';
+  static String routePath = '/budgetDetails';
 
   @override
   State<BudgetDetailsWidget> createState() => _BudgetDetailsWidgetState();
@@ -101,7 +105,7 @@ class _BudgetDetailsWidgetState extends State<BudgetDetailsWidget> {
                   ),
                   onPressed: () async {
                     context.pushNamed(
-                      'budget_DELETE',
+                      BudgetDELETEWidget.routeName,
                       queryParameters: {
                         'budgetList': serializeParam(
                           budgetDetailsBudgetsRecord.reference,
@@ -468,7 +472,7 @@ class _BudgetDetailsWidgetState extends State<BudgetDetailsWidget> {
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
                                     context.pushNamed(
-                                      'paymentDetails',
+                                      PaymentDetailsWidget.routeName,
                                       queryParameters: {
                                         'transactionDetails': serializeParam(
                                           transactionListTransactionsRecord

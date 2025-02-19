@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
@@ -13,6 +14,9 @@ export 'onboarding_model.dart';
 
 class OnboardingWidget extends StatefulWidget {
   const OnboardingWidget({super.key});
+
+  static String routeName = 'onboarding';
+  static String routePath = '/onboarding';
 
   @override
   State<OnboardingWidget> createState() => _OnboardingWidgetState();
@@ -379,7 +383,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     child: FFButtonWidget(
                       onPressed: () async {
                         context.pushNamed(
-                          'createBudgetBegin',
+                          CreateBudgetBeginWidget.routeName,
                           extra: <String, dynamic>{
                             kTransitionInfoKey: TransitionInfo(
                               hasTransition: true,

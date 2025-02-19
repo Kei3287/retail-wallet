@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -20,6 +21,9 @@ class MYProfilePageWidget extends StatefulWidget {
   });
 
   final DocumentReference? userProfile;
+
+  static String routeName = 'MY_profilePage';
+  static String routePath = '/mYProfilePage';
 
   @override
   State<MYProfilePageWidget> createState() => _MYProfilePageWidgetState();
@@ -166,7 +170,8 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                                                 .clearRedirectLocation();
 
                                             context.goNamedAuth(
-                                                'loginPage', context.mounted);
+                                                LoginPageWidget.routeName,
+                                                context.mounted);
                                           },
                                         ),
                                       ),
@@ -279,7 +284,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                       highlightColor: Colors.transparent,
                       onTap: () async {
                         context.pushNamed(
-                          'editProfile',
+                          EditProfileWidget.routeName,
                           queryParameters: {
                             'userProfile': serializeParam(
                               mYProfilePageUsersRecord.reference,
@@ -357,7 +362,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed('changePassword');
+                          context.pushNamed(ChangePasswordWidget.routeName);
                         },
                         child: Material(
                           color: Colors.transparent,
@@ -430,7 +435,8 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed('notificationsSettings');
+                          context
+                              .pushNamed(NotificationsSettingsWidget.routeName);
                         },
                         child: Material(
                           color: Colors.transparent,
@@ -503,7 +509,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed('tutorial_PROFILE');
+                          context.pushNamed(TutorialPROFILEWidget.routeName);
                         },
                         child: Material(
                           color: Colors.transparent,
@@ -576,7 +582,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed('privacyPolicy');
+                          context.pushNamed(PrivacyPolicyWidget.routeName);
                         },
                         child: Material(
                           color: Colors.transparent,

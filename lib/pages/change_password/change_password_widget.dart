@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,6 +14,9 @@ export 'change_password_model.dart';
 
 class ChangePasswordWidget extends StatefulWidget {
   const ChangePasswordWidget({super.key});
+
+  static String routeName = 'changePassword';
+  static String routePath = '/changePassword';
 
   @override
   State<ChangePasswordWidget> createState() => _ChangePasswordWidgetState();

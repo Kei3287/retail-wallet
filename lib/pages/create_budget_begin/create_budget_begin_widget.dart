@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'dart:ui';
+import '/index.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -19,6 +20,9 @@ export 'create_budget_begin_model.dart';
 
 class CreateBudgetBeginWidget extends StatefulWidget {
   const CreateBudgetBeginWidget({super.key});
+
+  static String routeName = 'createBudgetBegin';
+  static String routePath = '/createBudgetBegin';
 
   @override
   State<CreateBudgetBeginWidget> createState() =>
@@ -462,7 +466,7 @@ class _CreateBudgetBeginWidgetState extends State<CreateBudgetBeginWidget>
                                 ),
                               });
 
-                              context.pushNamed('MY_Card');
+                              context.pushNamed(MYCardWidget.routeName);
                             },
                             text: FFLocalizations.of(context).getText(
                               'v2shqq3z' /* Create Budget */,

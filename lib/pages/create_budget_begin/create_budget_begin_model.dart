@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'dart:ui';
+import '/index.dart';
 import 'create_budget_begin_widget.dart' show CreateBudgetBeginWidget;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';

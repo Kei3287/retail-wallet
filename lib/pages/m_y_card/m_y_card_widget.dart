@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -19,6 +20,9 @@ export 'm_y_card_model.dart';
 
 class MYCardWidget extends StatefulWidget {
   const MYCardWidget({super.key});
+
+  static String routeName = 'MY_Card';
+  static String routePath = '/mYCard';
 
   @override
   State<MYCardWidget> createState() => _MYCardWidgetState();
@@ -166,7 +170,7 @@ class _MYCardWidgetState extends State<MYCardWidget>
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           context.pushNamed(
-            'transaction_ADD',
+            TransactionADDWidget.routeName,
             extra: <String, dynamic>{
               kTransitionInfoKey: TransitionInfo(
                 hasTransition: true,
@@ -588,7 +592,7 @@ class _MYCardWidgetState extends State<MYCardWidget>
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.pushNamed(
-                                  'transferFunds',
+                                  TransferFundsWidget.routeName,
                                   extra: <String, dynamic>{
                                     kTransitionInfoKey: TransitionInfo(
                                       hasTransition: true,
@@ -768,7 +772,7 @@ class _MYCardWidgetState extends State<MYCardWidget>
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
                                     context.pushNamed(
-                                      'paymentDetails',
+                                      PaymentDetailsWidget.routeName,
                                       queryParameters: {
                                         'transactionDetails': serializeParam(
                                           transactionListTransactionsRecord

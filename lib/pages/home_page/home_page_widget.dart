@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,6 +13,9 @@ export 'home_page_model.dart';
 
 class HomePageWidget extends StatefulWidget {
   const HomePageWidget({super.key});
+
+  static String routeName = 'homePage';
+  static String routePath = '/homePage';
 
   @override
   State<HomePageWidget> createState() => _HomePageWidgetState();
@@ -483,7 +487,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
                                   context.pushNamed(
-                                    'transferFunds',
+                                    TransferFundsWidget.routeName,
                                     extra: <String, dynamic>{
                                       kTransitionInfoKey: TransitionInfo(
                                         hasTransition: true,
@@ -550,7 +554,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  context.goNamed('MY_Card');
+                                  context.goNamed(MYCardWidget.routeName);
                                 },
                                 child: Container(
                                   width:

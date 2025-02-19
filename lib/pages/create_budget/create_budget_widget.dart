@@ -20,6 +20,9 @@ export 'create_budget_model.dart';
 class CreateBudgetWidget extends StatefulWidget {
   const CreateBudgetWidget({super.key});
 
+  static String routeName = 'createBudget';
+  static String routePath = '/createBudget';
+
   @override
   State<CreateBudgetWidget> createState() => _CreateBudgetWidgetState();
 }

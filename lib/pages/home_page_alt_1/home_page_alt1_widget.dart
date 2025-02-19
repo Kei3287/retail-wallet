@@ -16,6 +16,9 @@ export 'home_page_alt1_model.dart';
 class HomePageAlt1Widget extends StatefulWidget {
   const HomePageAlt1Widget({super.key});
 
+  static String routeName = 'homePage_alt_1';
+  static String routePath = '/homePageAlt1';
+
   @override
   State<HomePageAlt1Widget> createState() => _HomePageAlt1WidgetState();
 }

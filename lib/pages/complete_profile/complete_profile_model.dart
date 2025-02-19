@@ -8,6 +8,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:math';
 import 'dart:ui';
+import '/index.dart';
 import 'complete_profile_widget.dart' show CompleteProfileWidget;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';

@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -17,6 +18,9 @@ export 'm_y_budgets_model.dart';
 
 class MYBudgetsWidget extends StatefulWidget {
   const MYBudgetsWidget({super.key});
+
+  static String routeName = 'MY_Budgets';
+  static String routePath = '/mYBudgets';
 
   @override
   State<MYBudgetsWidget> createState() => _MYBudgetsWidgetState();
@@ -138,7 +142,7 @@ class _MYBudgetsWidgetState extends State<MYBudgetsWidget>
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           context.pushNamed(
-            'createBudget',
+            CreateBudgetWidget.routeName,
             extra: <String, dynamic>{
               kTransitionInfoKey: TransitionInfo(
                 hasTransition: true,
@@ -435,7 +439,7 @@ class _MYBudgetsWidgetState extends State<MYBudgetsWidget>
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.pushNamed(
-                                  'budgetDetails',
+                                  BudgetDetailsWidget.routeName,
                                   queryParameters: {
                                     'budgetDetails': serializeParam(
                                       listViewBudgetsRecord.reference,

@@ -27,6 +27,9 @@ class TransactionEDITWidget extends StatefulWidget {
 
   final DocumentReference? transactionDetails;
 
+  static String routeName = 'transaction_EDIT';
+  static String routePath = '/transactionEDIT';
+
   @override
   State<TransactionEDITWidget> createState() => _TransactionEDITWidgetState();
 }

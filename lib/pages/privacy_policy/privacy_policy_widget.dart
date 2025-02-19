@@ -14,6 +14,9 @@ export 'privacy_policy_model.dart';
 class PrivacyPolicyWidget extends StatefulWidget {
   const PrivacyPolicyWidget({super.key});
 
+  static String routeName = 'privacyPolicy';
+  static String routePath = '/privacyPolicy';
+
   @override
   State<PrivacyPolicyWidget> createState() => _PrivacyPolicyWidgetState();
 }

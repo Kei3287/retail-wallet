@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -20,6 +21,9 @@ class BudgetDELETEWidget extends StatefulWidget {
   });
 
   final DocumentReference? budgetList;
+
+  static String routeName = 'budget_DELETE';
+  static String routePath = '/budgetDELETE';
 
   @override
   State<BudgetDELETEWidget> createState() => _BudgetDELETEWidgetState();
@@ -243,7 +247,7 @@ class _BudgetDELETEWidgetState extends State<BudgetDELETEWidget> {
                                 });
 
                                 context.goNamed(
-                                  'MY_Budgets',
+                                  MYBudgetsWidget.routeName,
                                   extra: <String, dynamic>{
                                     kTransitionInfoKey: TransitionInfo(
                                       hasTransition: true,

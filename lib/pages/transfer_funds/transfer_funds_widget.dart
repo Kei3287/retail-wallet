@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'dart:math';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -18,6 +19,9 @@ export 'transfer_funds_model.dart';
 
 class TransferFundsWidget extends StatefulWidget {
   const TransferFundsWidget({super.key});
+
+  static String routeName = 'transferFunds';
+  static String routePath = '/transferFunds';
 
   @override
   State<TransferFundsWidget> createState() => _TransferFundsWidgetState();
@@ -678,7 +682,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                     FFButtonWidget(
                       onPressed: () async {
                         context.pushNamed(
-                          'transferComplete',
+                          TransferCompleteWidget.routeName,
                           extra: <String, dynamic>{
                             kTransitionInfoKey: TransitionInfo(
                               hasTransition: true,

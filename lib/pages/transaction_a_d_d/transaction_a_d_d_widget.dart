@@ -22,6 +22,9 @@ export 'transaction_a_d_d_model.dart';
 class TransactionADDWidget extends StatefulWidget {
   const TransactionADDWidget({super.key});
 
+  static String routeName = 'transaction_ADD';
+  static String routePath = '/transactionADD';
+
   @override
   State<TransactionADDWidget> createState() => _TransactionADDWidgetState();
 }

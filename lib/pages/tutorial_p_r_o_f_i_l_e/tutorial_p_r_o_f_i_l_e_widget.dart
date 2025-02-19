@@ -14,6 +14,9 @@ export 'tutorial_p_r_o_f_i_l_e_model.dart';
 class TutorialPROFILEWidget extends StatefulWidget {
   const TutorialPROFILEWidget({super.key});
 
+  static String routeName = 'tutorial_PROFILE';
+  static String routePath = '/tutorialPROFILE';
+
   @override
   State<TutorialPROFILEWidget> createState() => _TutorialPROFILEWidgetState();
 }

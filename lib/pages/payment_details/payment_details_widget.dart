@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,9 @@ class PaymentDetailsWidget extends StatefulWidget {
 
   final DocumentReference? transactionDetails;
   final DocumentReference? userSpent;
+
+  static String routeName = 'paymentDetails';
+  static String routePath = '/paymentDetails';
 
   @override
   State<PaymentDetailsWidget> createState() => _PaymentDetailsWidgetState();
@@ -112,7 +116,7 @@ class _PaymentDetailsWidgetState extends State<PaymentDetailsWidget> {
                   ),
                   onPressed: () async {
                     context.pushNamed(
-                      'transaction_EDIT',
+                      TransactionEDITWidget.routeName,
                       queryParameters: {
                         'transactionDetails': serializeParam(
                           paymentDetailsTransactionsRecord.reference,

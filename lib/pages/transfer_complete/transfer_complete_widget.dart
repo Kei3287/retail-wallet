@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,6 +12,9 @@ export 'transfer_complete_model.dart';
 
 class TransferCompleteWidget extends StatefulWidget {
   const TransferCompleteWidget({super.key});
+
+  static String routeName = 'transferComplete';
+  static String routePath = '/transferComplete';
 
   @override
   State<TransferCompleteWidget> createState() => _TransferCompleteWidgetState();
@@ -98,7 +102,7 @@ class _TransferCompleteWidgetState extends State<TransferCompleteWidget> {
               child: FFButtonWidget(
                 onPressed: () async {
                   context.pushNamed(
-                    'MY_Card',
+                    MYCardWidget.routeName,
                     extra: <String, dynamic>{
                       kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,

@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,6 +13,9 @@ export 'login_page_model.dart';
 
 class LoginPageWidget extends StatefulWidget {
   const LoginPageWidget({super.key});
+
+  static String routeName = 'loginPage';
+  static String routePath = '/loginPage';
 
   @override
   State<LoginPageWidget> createState() => _LoginPageWidgetState();
@@ -323,7 +327,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         }
 
                                         context.goNamedAuth(
-                                            'MY_Card', context.mounted);
+                                            MYCardWidget.routeName,
+                                            context.mounted);
                                       },
                                       text: FFLocalizations.of(context).getText(
                                         'qbmoi1av' /* Login */,
@@ -366,7 +371,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('registerAccount');
+                                      context.pushNamed(
+                                          RegisterAccountWidget.routeName);
                                     },
                                     child: Container(
                                       width: MediaQuery.sizeOf(context).width *
