@@ -1,16 +1,13 @@
-import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:math';
 import 'dart:ui';
+import '/custom_code/actions/index.dart' as actions;
 import '/index.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -27,13 +24,10 @@ class TransferFundsWidget extends StatefulWidget {
   State<TransferFundsWidget> createState() => _TransferFundsWidgetState();
 }
 
-class _TransferFundsWidgetState extends State<TransferFundsWidget>
-    with TickerProviderStateMixin {
+class _TransferFundsWidgetState extends State<TransferFundsWidget> {
   late TransferFundsModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
@@ -42,209 +36,6 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
 
     _model.textController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();
-
-    animationsMap.addAll({
-      'containerOnPageLoadAnimation': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: 0.0.ms,
-            duration: 600.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-          MoveEffect(
-            curve: Curves.easeInOut,
-            delay: 0.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(0.0, 30.0),
-            end: Offset(0.0, 0.0),
-          ),
-          ScaleEffect(
-            curve: Curves.easeInOut,
-            delay: 0.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(0.4, 1.0),
-            end: Offset(1.0, 1.0),
-          ),
-        ],
-      ),
-      'buttonOnPageLoadAnimation': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: 0.0.ms,
-            duration: 600.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-          MoveEffect(
-            curve: Curves.easeInOut,
-            delay: 0.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(0.0, 47.0),
-            end: Offset(0.0, 0.0),
-          ),
-          ScaleEffect(
-            curve: Curves.easeInOut,
-            delay: 0.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(1.0, 1.0),
-            end: Offset(1.0, 1.0),
-          ),
-        ],
-      ),
-      'dropDownOnPageLoadAnimation1': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: 100.0.ms,
-            duration: 600.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-          MoveEffect(
-            curve: Curves.easeInOut,
-            delay: 100.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
-          ),
-          ScaleEffect(
-            curve: Curves.easeInOut,
-            delay: 100.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(1.0, 1.0),
-            end: Offset(1.0, 1.0),
-          ),
-        ],
-      ),
-      'dropDownOnPageLoadAnimation2': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: 140.0.ms,
-            duration: 600.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-          MoveEffect(
-            curve: Curves.easeInOut,
-            delay: 140.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(0.0, 70.0),
-            end: Offset(0.0, 0.0),
-          ),
-          ScaleEffect(
-            curve: Curves.easeInOut,
-            delay: 140.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(1.0, 1.0),
-            end: Offset(1.0, 1.0),
-          ),
-        ],
-      ),
-      'textFieldOnPageLoadAnimation': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: 170.0.ms,
-            duration: 600.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-          MoveEffect(
-            curve: Curves.easeInOut,
-            delay: 170.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(0.0, 80.0),
-            end: Offset(0.0, 0.0),
-          ),
-          ScaleEffect(
-            curve: Curves.easeInOut,
-            delay: 170.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(1.0, 1.0),
-            end: Offset(1.0, 1.0),
-          ),
-        ],
-      ),
-      'rowOnPageLoadAnimation1': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: 270.0.ms,
-            duration: 600.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-          MoveEffect(
-            curve: Curves.easeInOut,
-            delay: 270.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(0.0, 82.0),
-            end: Offset(0.0, 0.0),
-          ),
-          ScaleEffect(
-            curve: Curves.easeInOut,
-            delay: 270.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(1.0, 1.0),
-            end: Offset(1.0, 1.0),
-          ),
-        ],
-      ),
-      'rowOnPageLoadAnimation2': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: -220.0.ms,
-            duration: 600.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-          ScaleEffect(
-            curve: Curves.easeInOut,
-            delay: -220.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(0.4, 1.0),
-            end: Offset(1.0, 1.0),
-          ),
-        ],
-      ),
-      'textOnPageLoadAnimation': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: -220.0.ms,
-            duration: 600.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-          ScaleEffect(
-            curve: Curves.easeInOut,
-            delay: -220.0.ms,
-            duration: 600.0.ms,
-            begin: Offset(0.4, 1.0),
-            end: Offset(1.0, 1.0),
-          ),
-        ],
-      ),
-    });
-    setupAnimations(
-      animationsMap.values.where((anim) =>
-          anim.trigger == AnimationTrigger.onActionTrigger ||
-          !anim.applyInitialState),
-      this,
-    );
   }
 
   @override
@@ -256,6 +47,8 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).tertiary,
@@ -386,8 +179,11 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
-                                      'zq4ozx20' /* $7,630 */,
+                                    formatNumber(
+                                      FFAppState().rlusdBalance,
+                                      formatType: FormatType.decimal,
+                                      decimalType: DecimalType.periodDecimal,
+                                      currency: '＄',
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .displaySmall
@@ -409,40 +205,12 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      'qukh7yo1' /* **** 0149 */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Roboto Mono',
-                                          color: FlutterFlowTheme.of(context)
-                                              .textColor,
-                                          letterSpacing: 0.0,
-                                        ),
-                                  ),
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      'n87hkr7d' /* 05/25 */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Roboto Mono',
-                                          color: FlutterFlowTheme.of(context)
-                                              .textColor,
-                                          letterSpacing: 0.0,
-                                        ),
-                                  ),
-                                ],
+                                children: [],
                               ),
                             ),
                           ],
                         ),
-                      ).animateOnPageLoad(
-                          animationsMap['containerOnPageLoadAnimation']!),
+                      ),
                     ),
                     FFButtonWidget(
                       onPressed: () {
@@ -471,78 +239,29 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                         ),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
-                    ).animateOnPageLoad(
-                        animationsMap['buttonOnPageLoadAnimation']!),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
-                      child: FlutterFlowDropDown<String>(
-                        controller: _model.dropDownValueController1 ??=
-                            FormFieldController<String>(null),
-                        options: [
-                          FFLocalizations.of(context).getText(
-                            'w4smsh2i' /* Internal Transfer */,
-                          ),
-                          FFLocalizations.of(context).getText(
-                            '6uxty3hy' /* External Transfer */,
-                          ),
-                          FFLocalizations.of(context).getText(
-                            'p4ngma0d' /* ACH Payment */,
-                          )
-                        ],
-                        onChanged: (val) =>
-                            safeSetState(() => _model.dropDownValue1 = val),
-                        width: MediaQuery.sizeOf(context).width * 0.9,
-                        height: 60.0,
-                        textStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.override(
-                                  fontFamily: 'Lexend',
-                                  letterSpacing: 0.0,
-                                ),
-                        hintText: FFLocalizations.of(context).getText(
-                          'uxo87fjc' /* Transfer Type */,
-                        ),
-                        icon: Icon(
-                          Icons.keyboard_arrow_down_rounded,
-                          color: FlutterFlowTheme.of(context).grayLight,
-                          size: 15.0,
-                        ),
-                        fillColor:
-                            FlutterFlowTheme.of(context).secondaryBackground,
-                        elevation: 2.0,
-                        borderColor: FlutterFlowTheme.of(context).alternate,
-                        borderWidth: 2.0,
-                        borderRadius: 8.0,
-                        margin: EdgeInsetsDirectional.fromSTEB(
-                            20.0, 20.0, 12.0, 20.0),
-                        hidesUnderline: true,
-                        isSearchable: false,
-                        isMultiSelect: false,
-                      ).animateOnPageLoad(
-                          animationsMap['dropDownOnPageLoadAnimation1']!),
                     ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                       child: FlutterFlowDropDown<String>(
-                        controller: _model.dropDownValueController2 ??=
+                        controller: _model.dropDownValueController ??=
                             FormFieldController<String>(null),
                         options: [
                           FFLocalizations.of(context).getText(
                             'fddma8xl' /* Select Account */,
                           ),
                           FFLocalizations.of(context).getText(
-                            '23l6kqgm' /* Account ****2010 */,
+                            '23l6kqgm' /* Keisuke */,
                           ),
                           FFLocalizations.of(context).getText(
-                            '3hwdfadf' /* Account ****2011 */,
+                            '3hwdfadf' /* Robert */,
                           ),
                           FFLocalizations.of(context).getText(
-                            'xvj00xg1' /* Account ****2012 */,
+                            'xvj00xg1' /* Jason */,
                           )
                         ],
                         onChanged: (val) =>
-                            safeSetState(() => _model.dropDownValue2 = val),
+                            safeSetState(() => _model.dropDownValue = val),
                         width: MediaQuery.sizeOf(context).width * 0.9,
                         height: 60.0,
                         textStyle:
@@ -569,8 +288,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                         hidesUnderline: true,
                         isSearchable: false,
                         isMultiSelect: false,
-                      ).animateOnPageLoad(
-                          animationsMap['dropDownOnPageLoadAnimation2']!),
+                      ),
                     ),
                     Padding(
                       padding:
@@ -629,8 +347,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                                 ),
                         validator:
                             _model.textControllerValidator.asValidator(context),
-                      ).animateOnPageLoad(
-                          animationsMap['textFieldOnPageLoadAnimation']!),
+                      ),
                     ),
                     Padding(
                       padding:
@@ -638,32 +355,8 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              'wngoi0v4' /* Your new account balance is: */,
-                            ),
-                            style:
-                                FlutterFlowTheme.of(context).bodySmall.override(
-                                      fontFamily: 'Lexend',
-                                      letterSpacing: 0.0,
-                                    ),
-                          ),
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              'g6bfec2g' /* $7,630 */,
-                            ),
-                            textAlign: TextAlign.end,
-                            style: FlutterFlowTheme.of(context)
-                                .headlineSmall
-                                .override(
-                                  fontFamily: 'Lexend',
-                                  letterSpacing: 0.0,
-                                ),
-                          ),
-                        ],
-                      ).animateOnPageLoad(
-                          animationsMap['rowOnPageLoadAnimation1']!),
+                        children: [],
+                      ),
                     ),
                   ],
                 ),
@@ -681,6 +374,42 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                   children: [
                     FFButtonWidget(
                       onPressed: () async {
+                        var _shouldSetState = false;
+                        _model.txHash = await actions.transfer(
+                          '0x84e179109468751EBd8304F8FD47E91F229003Ed',
+                          _model.textController.text,
+                        );
+                        _shouldSetState = true;
+                        if (_model.txHash != null && _model.txHash != '') {
+                          _model.newBalance = await actions.calculateNewBalance(
+                            FFAppState().rlusdBalance,
+                            _model.textController.text,
+                          );
+                          _shouldSetState = true;
+                          FFAppState().rlusdBalance = _model.newBalance!;
+                          safeSetState(() {});
+                        } else {
+                          await showDialog(
+                            context: context,
+                            builder: (alertDialogContext) {
+                              return AlertDialog(
+                                title: Text('Failed to transfer'),
+                                content:
+                                    Text('Internal Error. Please try agian.'),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () =>
+                                        Navigator.pop(alertDialogContext),
+                                    child: Text('Ok'),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                          if (_shouldSetState) safeSetState(() {});
+                          return;
+                        }
+
                         context.pushNamed(
                           TransferCompleteWidget.routeName,
                           extra: <String, dynamic>{
@@ -691,6 +420,8 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                             ),
                           },
                         );
+
+                        if (_shouldSetState) safeSetState(() {});
                       },
                       text: FFLocalizations.of(context).getText(
                         'xaw2jdst' /* Send Transfer */,
@@ -720,7 +451,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                   ],
                 ),
               ],
-            ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation2']!),
+            ),
           ),
           Text(
             FFLocalizations.of(context).getText(
@@ -731,7 +462,7 @@ class _TransferFundsWidgetState extends State<TransferFundsWidget>
                   color: Color(0x43000000),
                   letterSpacing: 0.0,
                 ),
-          ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation']!),
+          ),
         ],
       ),
     );

@@ -865,47 +865,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': '\$7.630',
       'es': '\$7,630',
     },
-    'qukh7yo1': {
-      'en': '**** 0149',
-      'ar': '**** 0149',
-      'de': '**** 0149',
-      'es': '**** 0149',
-    },
-    'n87hkr7d': {
-      'en': '05/25',
-      'ar': '05/25',
-      'de': '25.05',
-      'es': '25/05',
-    },
     '3ct4fj7p': {
       'en': 'Change Account',
       'ar': 'تغير الحساب',
       'de': 'Account wechseln',
       'es': 'Cambiar cuenta',
-    },
-    'uxo87fjc': {
-      'en': 'Transfer Type',
-      'ar': '',
-      'de': '',
-      'es': '',
-    },
-    'w4smsh2i': {
-      'en': 'Internal Transfer',
-      'ar': 'التحويل الداخلي',
-      'de': 'Interner Transfer',
-      'es': 'Transferencia interna',
-    },
-    '6uxty3hy': {
-      'en': 'External Transfer',
-      'ar': 'التحويل الخارجي',
-      'de': 'Externe Übertragung',
-      'es': 'Transferencia externa',
-    },
-    'p4ngma0d': {
-      'en': 'ACH Payment',
-      'ar': 'دفع ACH',
-      'de': 'ACH-Zahlung',
-      'es': 'Pago CCA',
     },
     'ok5xluvk': {
       'en': 'Choose an Account',
@@ -920,19 +884,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Seleccionar cuenta',
     },
     '23l6kqgm': {
-      'en': 'Account ****2010',
+      'en': 'Keisuke',
       'ar': 'الحساب **** 2010',
       'de': 'Konto ****2010',
       'es': 'Cuenta ****2010',
     },
     '3hwdfadf': {
-      'en': 'Account ****2011',
+      'en': 'Robert',
       'ar': 'الحساب **** 2011',
       'de': 'Konto ****2011',
       'es': 'Cuenta ****2011',
     },
     'xvj00xg1': {
-      'en': 'Account ****2012',
+      'en': 'Jason',
       'ar': 'الحساب **** 2012',
       'de': 'Konto ****2012',
       'es': 'Cuenta ****2012',
@@ -948,12 +912,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'رصيد حسابك الجديد هو:',
       'de': 'Ihr neuer Kontostand beträgt:',
       'es': 'El nuevo saldo de su cuenta es:',
-    },
-    'g6bfec2g': {
-      'en': '\$7,630',
-      'ar': '7630 دولارًا',
-      'de': '\$7.630',
-      'es': '\$7,630',
     },
     'xaw2jdst': {
       'en': 'Send Transfer',

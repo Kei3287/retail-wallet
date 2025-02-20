@@ -5,4 +5,6 @@ export 'get_wallet_address.dart' show getWalletAddress;
 export 'get_private_key.dart' show getPrivateKey;
 export 'refresh_login.dart' show refreshLogin;
 export 'get_r_l_u_s_d_balance.dart' show getRLUSDBalance;
-export 'get_rlusd_balance.dart' show getRlusdBalance;
+export 'transfer.dart' show transfer;
+export 'calculate_new_balance.dart' show calculateNewBalance;
+export 'get_native_balance.dart' show getNativeBalance;
