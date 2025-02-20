@@ -8,3 +8,4 @@ export 'get_r_l_u_s_d_balance.dart' show getRLUSDBalance;
 export 'transfer.dart' show transfer;
 export 'calculate_new_balance.dart' show calculateNewBalance;
 export 'get_native_balance.dart' show getNativeBalance;
+export 'getrlusd_transaction_history.dart' show getrlusdTransactionHistory;

@@ -1,5 +1,7 @@
 // Automatic FlutterFlow imports
 import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
+import '/backend/schema/enums/enums.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'index.dart'; // Imports other custom actions
@@ -24,8 +26,9 @@ Future<String> transfer(String recipientAddress, String amount) async {
     }
     final amountDouble = double.parse(amount);
     final recipient = web3dart.EthereumAddress.fromHex(recipientAddress);
-    final bigIntAmount = BigInt.from((amountDouble * BigInt.from(10).pow(18).toDouble()).round());
-    
+    final bigIntAmount = BigInt.from(
+        (amountDouble * BigInt.from(10).pow(18).toDouble()).round());
+
     // RLUSD uses 18 decimals
     final value = bigIntAmount;
 

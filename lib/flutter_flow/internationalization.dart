@@ -531,14 +531,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Gleichgewicht',
       'es': 'Equilibrio',
     },
-    'lr97k2rc': {
-      'en': '0.001 ETH',
-      'ar': '**** 0149',
-      'de': '**** 0149',
-      'es': '**** 0149',
+    'ic89l140': {
+      'en': '※It may take a few minutes to update ',
+      'ar': '',
+      'de': '',
+      'es': '',
     },
     '8bnd6lco': {
       'en': 'Transfer',
+      'ar': 'تحويل',
+      'de': 'Transfer',
+      'es': 'Transferir',
+    },
+    '1qz20d2b': {
+      'en': 'Withdraw',
       'ar': 'تحويل',
       'de': 'Transfer',
       'es': 'Transferir',
@@ -550,7 +556,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Transacción',
     },
     'xs4cn7uk': {
-      'en': 'Income',
+      'en': 'Sent',
+      'ar': 'دخل',
+      'de': 'Einkommen',
+      'es': 'Ingreso',
+    },
+    'h98ttn1q': {
+      'en': 'Received',
       'ar': 'دخل',
       'de': 'Einkommen',
       'es': 'Ingreso',
@@ -859,12 +871,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Gleichgewicht',
       'es': 'Equilibrio',
     },
-    'zq4ozx20': {
-      'en': '\$7,630',
-      'ar': '7630 دولارًا',
-      'de': '\$7.630',
-      'es': '\$7,630',
-    },
     '3ct4fj7p': {
       'en': 'Change Account',
       'ar': 'تغير الحساب',
@@ -906,12 +912,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'المبلغ بالدولار',
       'de': '\$ Betrag',
       'es': '\$ Monto',
-    },
-    'wngoi0v4': {
-      'en': 'Your new account balance is:',
-      'ar': 'رصيد حسابك الجديد هو:',
-      'de': 'Ihr neuer Kontostand beträgt:',
-      'es': 'El nuevo saldo de su cuenta es:',
     },
     'xaw2jdst': {
       'en': 'Send Transfer',
@@ -2110,6 +2110,63 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
     },
     'vox9t1s0': {
+      'en': 'Home',
+      'ar': 'مسكن',
+      'de': 'Heim',
+      'es': 'Casa',
+    },
+  },
+  // transferFundsCopy
+  {
+    'fiy9tb6i': {
+      'en': 'Withdraw Funds',
+      'ar': 'تحويل الأموال',
+      'de': 'Geld überweisen',
+      'es': 'Transferir fondos',
+    },
+    'j6b1t6g9': {
+      'en': 'Balance',
+      'ar': 'الرصيد',
+      'de': 'Gleichgewicht',
+      'es': 'Equilibrio',
+    },
+    'frdmyq2k': {
+      'en': 'Choose an Account',
+      'ar': '',
+      'de': '',
+      'es': '',
+    },
+    '3c10hrik': {
+      'en': 'My Bank1',
+      'ar': 'حدد حساب',
+      'de': 'Konto auswählen',
+      'es': 'Seleccionar cuenta',
+    },
+    'r47sitsj': {
+      'en': 'My Bank2',
+      'ar': 'الحساب **** 2010',
+      'de': 'Konto ****2010',
+      'es': 'Cuenta ****2010',
+    },
+    'c84gzi4c': {
+      'en': '\$ Amount',
+      'ar': 'المبلغ بالدولار',
+      'de': '\$ Betrag',
+      'es': '\$ Monto',
+    },
+    'd93m187a': {
+      'en': 'Withdraw',
+      'ar': 'أرسل حوالة',
+      'de': 'Überweisung senden',
+      'es': 'Enviar transferencia',
+    },
+    '2spd5t72': {
+      'en': 'Tap above to complete transfer',
+      'ar': 'اضغط أعلاه لإكمال النقل',
+      'de': 'Tippen Sie oben, um die Übertragung abzuschließen',
+      'es': 'Toque arriba para completar la transferencia',
+    },
+    'zdrnwcjg': {
       'en': 'Home',
       'ar': 'مسكن',
       'de': 'Heim',

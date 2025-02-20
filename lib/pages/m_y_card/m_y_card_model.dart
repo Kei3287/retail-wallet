@@ -1,5 +1,5 @@
-import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
+import '/backend/schema/enums/enums.dart';
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -19,6 +19,8 @@ class MYCardModel extends FlutterFlowModel<MYCardWidget> {
 
   // Stores action output result for [Custom Action - getRLUSDBalance] action in MY_Card widget.
   double? rlusdBalance;
+  // Stores action output result for [Custom Action - getrlusdTransactionHistory] action in MY_Card widget.
+  List<TransactionStruct>? transactionsResult;
 
   @override
   void initState(BuildContext context) {}
