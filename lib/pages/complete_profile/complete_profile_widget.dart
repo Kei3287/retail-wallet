@@ -615,7 +615,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                             photoUrl: '',
                           ));
 
-                          context.pushNamed(OnboardingWidget.routeName);
+                          context.pushNamed(MYCardWidget.routeName);
                         },
                         text: FFLocalizations.of(context).getText(
                           'hbhd3bdt' /* Complete Profile */,
@@ -670,7 +670,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
 
                       return FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed(OnboardingWidget.routeName);
+                          context.pushNamed(MYCardWidget.routeName);
                         },
                         text: FFLocalizations.of(context).getText(
                           'w75dikic' /* Skip for Now */,

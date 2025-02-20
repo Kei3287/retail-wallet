@@ -21,8 +21,8 @@ Future<bool> initializeWeb3Client() async {
     final String rpcUrl =
         FFDevEnvironmentValues.currentEnvironment.toLowerCase() !=
                 FFAppConstants.production.toLowerCase()
-            ? 'https://rpc-amoy.polygon.technology/'
-            : 'https://polygon-rpc.com';
+            ? 'https://ethereum-sepolia.publicnode.com'
+            : 'https://ethereum.publicnode.com';
 
     // Initialize the Web3Client using the singleton manager
     Web3ClientManager().initialize(rpcUrl);

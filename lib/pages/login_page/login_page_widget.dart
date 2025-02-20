@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/custom_code/actions/index.dart' as actions;
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -47,6 +48,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -326,9 +329,39 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           return;
                                         }
 
-                                        context.goNamedAuth(
-                                            MYCardWidget.routeName,
-                                            context.mounted);
+                                        await actions.loginWithWeb3Auth(
+                                          context,
+                                          currentJwtToken!,
+                                        );
+                                        if (FFAppState().walletAddress !=
+                                                null &&
+                                            FFAppState().walletAddress != '') {
+                                          context.pushNamedAuth(
+                                              MYCardWidget.routeName,
+                                              context.mounted);
+
+                                          return;
+                                        } else {
+                                          await showDialog(
+                                            context: context,
+                                            builder: (alertDialogContext) {
+                                              return AlertDialog(
+                                                title: Text('Failed to login'),
+                                                content: Text(
+                                                    'Internal error. Please try agian'),
+                                                actions: [
+                                                  TextButton(
+                                                    onPressed: () =>
+                                                        Navigator.pop(
+                                                            alertDialogContext),
+                                                    child: Text('Ok'),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                          return;
+                                        }
                                       },
                                       text: FFLocalizations.of(context).getText(
                                         'qbmoi1av' /* Login */,

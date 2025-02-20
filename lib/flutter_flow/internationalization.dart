@@ -520,7 +520,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // MY_Card
   {
     'xn2so8km': {
-      'en': 'My Card',
+      'en': 'My Wallet',
       'ar': 'بطاقتي',
       'de': 'Meine Karte',
       'es': 'Mi tarjeta',
@@ -531,77 +531,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Gleichgewicht',
       'es': 'Equilibrio',
     },
-    'h3086ma4': {
-      'en': '\$7,630',
-      'ar': '7630 دولارًا',
-      'de': '\$7.630',
-      'es': '\$7,630',
-    },
     'lr97k2rc': {
-      'en': '**** 0149',
+      'en': '0.001 ETH',
       'ar': '**** 0149',
       'de': '**** 0149',
       'es': '**** 0149',
-    },
-    'l9racj60': {
-      'en': '05/25',
-      'ar': '05/25',
-      'de': '25.05',
-      'es': '25/05',
-    },
-    '9b0j67se': {
-      'en': 'Income',
-      'ar': 'دخل',
-      'de': 'Einkommen',
-      'es': 'Ingreso',
-    },
-    'axrvkhrv': {
-      'en': '+\$12,402',
-      'ar': '+ 12402 دولار',
-      'de': '+12.402 \$',
-      'es': '+\$12,402',
-    },
-    '0d7w9e0i': {
-      'en': '4.5% ',
-      'ar': '4.5٪',
-      'de': '4,5 %',
-      'es': '4,5%',
-    },
-    'mggh8wu7': {
-      'en': 'Spending',
-      'ar': 'الإنفاق',
-      'de': 'Ausgaben',
-      'es': 'Gasto',
-    },
-    'c5bszisf': {
-      'en': '-\$8,392',
-      'ar': '- 8،392 دولارًا',
-      'de': '-8.392 \$',
-      'es': '-\$8,392',
-    },
-    '85pb8msl': {
-      'en': '4.5% ',
-      'ar': '4.5٪',
-      'de': '4,5 %',
-      'es': '4,5%',
-    },
-    'yet7zk5d': {
-      'en': 'Quick Service',
-      'ar': 'خدمة سريعة',
-      'de': 'Schneller Service',
-      'es': 'Servicio rapido',
     },
     '8bnd6lco': {
       'en': 'Transfer',
       'ar': 'تحويل',
       'de': 'Transfer',
       'es': 'Transferir',
-    },
-    'roobc02h': {
-      'en': 'Pause Card',
-      'ar': 'بطاقة وقفة',
-      'de': 'Pausenkarte',
-      'es': 'Tarjeta de pausa',
     },
     '27pb7ji4': {
       'en': 'Transaction',
